@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros Passos com DOM</title>
+    <style>
+      body {
+        background: rgb(211, 18, 83);
+        color: white;
+        font: normal 18pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai um resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong></p>
+    <div id = "msg">Clique em mim</div>
+    <script>
+      // coloca um elemento html dentro de uma variavel
+      let p1 = window.document.getElementsByTagName('p')[1]; // selecao por tag
+      let p2 = window.document.getElementById('msg'); // selecao por seletor
+      p2.style.background = "purple";
+      p1.style.color = 'black';
+
+      let p3 = window.document.querySelector('div#msg');
+      p3.style.background = "blue";
+
+      let corpo = window.document.body;
+      corpo.background = 'black';
+      // Acessando a arvore DOM
+      //window.document.write(p1.innerText);
+    </script>
+  </body>
+</html>
